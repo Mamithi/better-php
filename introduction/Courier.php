@@ -11,8 +11,14 @@ class courier
     public $name;
     public $home_country;
 
-    public function __construct()
+    public function __construct($name)
     {
+        $this->name = $name;
+        return true;
+    }
 
+    public function ship($parcel){
+        # Send the parcel to this route
+        return true;
     }
 }
