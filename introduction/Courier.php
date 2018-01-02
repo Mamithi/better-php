@@ -14,11 +14,22 @@ class courier
     public function __construct($name)
     {
         $this->name = $name;
-        return true;
+
+        return TRUE;
     }
 
-    public function ship($parcel){
+    public function ship($parcel)
+    {
         # Send the parcel to this route
-        return true;
+        return TRUE;
+    }
+
+    public function calculateShipping($parcel)
+    {
+        $rate = 1.78;
+
+        $cost = $rate * $parcel->weight;
+
+        return $cost;
     }
 }
