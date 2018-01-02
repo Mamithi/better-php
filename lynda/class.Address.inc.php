@@ -13,6 +13,10 @@ class Address {
     public $postal_code;
     public $country_name;
 
+    protected  $_address_id;
+    protected $_time_created;
+    protected $_time_updated;
+
     function display(){
         $output = '';
         $output .= $this->street_address_1;
